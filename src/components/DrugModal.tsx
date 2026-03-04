@@ -52,9 +52,11 @@ const DrugModal = ({ drug, onClose }: DrugModalProps) => {
         <div className="px-8 pt-6 pb-8">
           <div className="grid grid-cols-2 gap-5 mb-6">
             {[
-              { label: 'Target', value: drug.target },
-              { label: 'Enrollment', value: drug.enrollment },
-              { label: 'Next Catalyst', value: drug.catalyst },
+              { label: 'Generic', value: drug.generic },
+              { label: 'Indication', value: drug.indication },
+              { label: 'Enrollment', value: `${drug.enrollment} pts` },
+              { label: 'Designation', value: drug.desig },
+              { label: 'NCT ID', value: drug.nctid },
               { label: 'Risk Profile', value: drug.risk?.charAt(0).toUpperCase() + drug.risk?.slice(1) },
             ].map((item) => (
               <div key={item.label}>
@@ -64,7 +66,7 @@ const DrugModal = ({ drug, onClose }: DrugModalProps) => {
             ))}
           </div>
           <div className="bg-bio-surface2 border border-border border-l-[3px] border-l-primary px-5 py-4 text-[0.68rem] text-bio-muted2 leading-8">
-            {drug.detailInsight}
+            {drug.insight}
           </div>
         </div>
       </div>
