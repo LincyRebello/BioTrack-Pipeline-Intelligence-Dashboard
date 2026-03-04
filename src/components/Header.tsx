@@ -8,7 +8,7 @@ const Header = () => (
       Pipeline Intelligence Platform
     </div>
     <div className="flex justify-end text-[0.6rem] tracking-wider text-bio-muted uppercase">
-      Clinical Data · 2024
+      FDA Data · 2023–2025
     </div>
   </header>
 );
