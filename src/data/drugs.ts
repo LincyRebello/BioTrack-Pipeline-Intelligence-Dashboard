@@ -1,88 +1,104 @@
 export interface Drug {
   id: string;
   name: string;
+  generic: string;
   company: string;
   phase: 'Phase I' | 'Phase II' | 'Phase III' | 'Approved';
   area: string;
+  indication: string;
   mechanism: string;
+  enrollment: number;
+  startYear: number;
   risk: 'low' | 'medium' | 'high';
+  desig: string;
+  nctid: string;
   insight: string;
-  target?: string;
-  enrollment?: string;
-  catalyst?: string;
-  detailInsight?: string;
 }
 
 export const drugs: Drug[] = [
   {
-    id: '1', name: 'Veloranib', company: 'Aethon Therapeutics', phase: 'Phase III',
-    area: 'Oncology', mechanism: 'VEGFR2 Inhibitor', risk: 'low',
-    insight: 'Breakthrough designation granted; pivotal STELLAR trial shows 42% ORR in 2L NSCLC.',
-    target: 'VEGFR2/KDR', enrollment: '1,240 pts', catalyst: 'PDUFA Q2 2025',
-    detailInsight: 'Veloranib represents a potential best-in-class VEGFR2 inhibitor with a differentiated safety profile. The STELLAR trial demonstrated statistically significant PFS improvement (HR 0.58, p<0.001) versus standard of care in second-line NSCLC.'
+    id: '1', name: 'Imdelltra', generic: 'tarlatamab-dlle', company: 'Amgen',
+    phase: 'Approved', area: 'Oncology', indication: 'Extensive-Stage Small Cell Lung Cancer',
+    mechanism: 'Bispecific T-cell engager (DLL3 × CD3)', enrollment: 220, startYear: 2021,
+    risk: 'low', desig: 'Breakthrough Therapy', nctid: 'NCT05060016',
+    insight: 'FDA accelerated approval May 2024 (DeLLphi-301 trial). First-in-class DLL3-targeting bispecific. ORR of 40%, median OS 14.3 months in heavily pretreated ES-SCLC. Confirmatory Phase 3 (DeLLphi-304) ongoing to convert to full approval.'
   },
   {
-    id: '2', name: 'Neurexia-7', company: 'Cortex Biosciences', phase: 'Phase II',
-    area: 'Neurology', mechanism: 'NMDA Modulator', risk: 'high',
-    insight: 'CNS penetration confirmed; Phase 2a futility analysis pending. Binary readout risk.',
-    target: 'NMDA/GluN2B', enrollment: '380 pts', catalyst: 'Interim data Q3 2025',
-    detailInsight: 'Neurexia-7 is a novel NMDA receptor modulator designed to improve synaptic plasticity in treatment-resistant depression. Phase 1b data showed dose-dependent MADRS improvement, but CNS trials carry inherent high-risk binary readout profiles.'
+    id: '2', name: 'Leqembi', generic: 'lecanemab-irmb', company: 'Eisai / Biogen',
+    phase: 'Approved', area: 'Neurology', indication: 'Early Alzheimer\'s Disease (MCI / Mild Dementia)',
+    mechanism: 'Anti-amyloid-beta protofibril monoclonal antibody', enrollment: 1795, startYear: 2019,
+    risk: 'low', desig: 'Breakthrough Therapy', nctid: 'NCT03887455',
+    insight: 'Full FDA approval July 2023 based on Clarity AD Phase 3 trial (1,795 pts). Slowed clinical decline by 27% on CDR-SB vs placebo. First anti-amyloid antibody to receive full approval. Subcutaneous autoinjector BLA filed 2024 for home dosing.'
   },
   {
-    id: '3', name: 'Cardivex', company: 'Helix Cardio', phase: 'Phase II',
-    area: 'Cardiology', mechanism: 'PCSK9 siRNA', risk: 'medium',
-    insight: 'Novel siRNA approach to LDL lowering. Phase 2 dose-optimization ongoing.',
-    target: 'PCSK9 mRNA', enrollment: '620 pts', catalyst: 'Phase 3 initiation Q1 2025',
-    detailInsight: 'Cardivex uses a next-generation GalNAc-conjugated siRNA to silence PCSK9 with twice-yearly dosing. Phase 2 data demonstrated 62% LDL reduction sustained over 6 months with favorable hepatic safety.'
+    id: '3', name: 'Imlunestrant', generic: 'imlunestrant', company: 'Eli Lilly',
+    phase: 'Approved', area: 'Oncology', indication: 'ER+/HER2− Breast Cancer (ESR1-mutant)',
+    mechanism: 'Next-gen selective estrogen receptor degrader (SERD)', enrollment: 874, startYear: 2020,
+    risk: 'low', desig: 'Priority Review', nctid: 'NCT04711252',
+    insight: 'FDA approved September 2025 (EMBER-3 Phase 3 trial). Targets ESR1 mutations — the primary resistance mechanism to standard hormone therapy. Effective in combo with abemaciclib. Addresses large unmet need in 2L+ HR+ breast cancer.'
   },
   {
-    id: '4', name: 'Oncolyra', company: 'Meridian Oncology', phase: 'Phase I',
-    area: 'Oncology', mechanism: 'CD47 × PD-L1 Bispecific', risk: 'high',
-    insight: 'First-in-human dose escalation. Dual checkpoint mechanism with high theoretical promise.',
-    target: 'CD47/PD-L1', enrollment: '84 pts', catalyst: 'Dose expansion Q4 2025',
-    detailInsight: 'Oncolyra is a first-in-class bispecific antibody bridging innate and adaptive immunity through simultaneous CD47 and PD-L1 blockade. Early dose-escalation data show manageable anemia signals with preliminary anti-tumor activity in solid tumors.'
+    id: '4', name: 'Tarlatamab', generic: 'tarlatamab', company: 'Amgen',
+    phase: 'Phase III', area: 'Oncology', indication: 'ES-SCLC 1st Line (DeLLphi-304)',
+    mechanism: 'Bispecific T-cell engager (DLL3 × CD3)', enrollment: 610, startYear: 2023,
+    risk: 'low', desig: 'Breakthrough Therapy', nctid: 'NCT05765006',
+    insight: 'Confirmatory Phase 3 to convert accelerated approval to full approval and expand to 1L setting. If positive, could displace atezolizumab + chemo as standard of care in ES-SCLC — a major commercial inflection.'
   },
   {
-    id: '5', name: 'Immunara', company: 'Shield Biologics', phase: 'Approved',
-    area: 'Immunology', mechanism: 'IL-23 Antagonist', risk: 'low',
-    insight: 'FDA approved Dec 2024. Best-in-class durability with Q12W dosing in psoriasis.',
-    target: 'IL-23p19', enrollment: 'N/A (Marketed)', catalyst: 'EU filing Q1 2025',
-    detailInsight: 'Immunara achieved FDA approval based on the CLARITY Phase 3 program demonstrating PASI 90 response rates of 78% at Week 52 with quarterly dosing — positioning it as a best-in-class IL-23 inhibitor with potential $3B+ peak sales.'
+    id: '5', name: 'Tirzepatide', generic: 'tirzepatide', company: 'Eli Lilly',
+    phase: 'Phase III', area: 'Cardiology', indication: 'Obstructive Sleep Apnea + Obesity (SURMOUNT-OSA)',
+    mechanism: 'Dual GLP-1/GIP receptor agonist', enrollment: 469, startYear: 2022,
+    risk: 'low', desig: 'Fast Track', nctid: 'NCT05412004',
+    insight: 'SURMOUNT-OSA Phase 3 showed ~63% reduction in apnea-hypopnea index — FDA approved for OSA in 2024. First pharmacotherapy approved for OSA. Expands the $50B+ GLP-1 market into a massive new indication.'
   },
   {
-    id: '6', name: 'Zelpara', company: 'Novex Pharma', phase: 'Phase III',
-    area: 'Oncology', mechanism: 'KRAS G12C Inhibitor', risk: 'medium',
-    insight: 'Registrational trial in CRC; competing with 3 other KRAS programs. Crowded space.',
-    target: 'KRAS G12C', enrollment: '890 pts', catalyst: 'Top-line data Q4 2025',
-    detailInsight: 'Zelpara targets the KRAS G12C mutation in colorectal cancer, an indication with high unmet need. While Phase 2 data showed 34% ORR, the competitive landscape with Sotorasib and Adagrasib creates commercial risk.'
+    id: '6', name: 'Givinostat', generic: 'givinostat', company: 'Italfarmaco',
+    phase: 'Approved', area: 'Neurology', indication: 'Duchenne Muscular Dystrophy (age 6+)',
+    mechanism: 'HDAC inhibitor', enrollment: 179, startYear: 2019,
+    risk: 'low', desig: 'Orphan Drug', nctid: 'NCT02851797',
+    insight: 'FDA approved 2024 — only the third treatment for DMD. HDAC inhibition promotes muscle repair and reduces degeneration. Orphan Drug designation provides 7-year market exclusivity. Small patient population but high unmet need and strong pricing power.'
   },
   {
-    id: '7', name: 'Tremidex', company: 'Auros Neuro', phase: 'Phase I',
-    area: 'Neurology', mechanism: 'Tau Aggregation Inhibitor', risk: 'high',
-    insight: 'Alzheimer\'s pipeline entry. Tau-targeting approach; early PK/PD being evaluated.',
-    target: 'Tau Protein', enrollment: '56 pts', catalyst: 'Phase 1b start Q2 2025',
-    detailInsight: 'Tremidex represents a novel small-molecule approach to tau aggregation inhibition in early Alzheimer\'s disease. Preclinical data showed 70% reduction in phospho-tau in transgenic mouse models, but CNS drug development carries substantial translational risk.'
+    id: '7', name: 'Arimoclomol', generic: 'arimoclomol', company: 'Zevra Therapeutics',
+    phase: 'Approved', area: 'Neurology', indication: 'Niemann-Pick Disease Type C',
+    mechanism: 'Heat shock protein co-inducer', enrollment: 119, startYear: 2016,
+    risk: 'low', desig: 'Orphan Drug', nctid: 'NCT02612129',
+    insight: 'FDA approved September 2024 — only approved therapy for this ultra-rare lysosomal storage disorder. HSP upregulation protects neurons from misfolded protein accumulation. Orphan status + zero competition = strong pricing power despite small patient population.'
   },
   {
-    id: '8', name: 'Renalyx', company: 'Apex Renal', phase: 'Phase II',
-    area: 'Cardiology', mechanism: 'MR Antagonist', risk: 'medium',
-    insight: 'Non-steroidal MRA for CKD. Phase 2 showed 30% eGFR slope improvement.',
-    target: 'Mineralocorticoid Receptor', enrollment: '510 pts', catalyst: 'Phase 3 design Q3 2025',
-    detailInsight: 'Renalyx is a next-generation non-steroidal mineralocorticoid receptor antagonist designed for chronic kidney disease with reduced hyperkalemia risk versus Finerenone. Phase 2 demonstrated significant eGFR slope preservation.'
+    id: '8', name: 'Osimertinib', generic: 'osimertinib', company: 'AstraZeneca',
+    phase: 'Phase III', area: 'Oncology', indication: 'EGFR-mutant NSCLC Adjuvant (LAURA trial)',
+    mechanism: '3rd-gen EGFR tyrosine kinase inhibitor', enrollment: 216, startYear: 2018,
+    risk: 'low', desig: 'Breakthrough Therapy', nctid: 'NCT03521154',
+    insight: 'LAURA Phase 3 (NEJM 2024) showed unprecedented PFS benefit after chemoradiotherapy in unresectable Stage III EGFR+ NSCLC (39.1 vs 5.6 months, HR 0.16). New indication approval followed. Textbook example of post-market trials expanding addressable market.'
   },
   {
-    id: '9', name: 'Celtrion-X', company: 'Vanguard Immuno', phase: 'Phase III',
-    area: 'Immunology', mechanism: 'Anti-TL1A', risk: 'low',
-    insight: 'Pivotal IBD trial. TL1A is the hottest target in GI — potential blockbuster.',
-    target: 'TL1A/TNFSF15', enrollment: '1,100 pts', catalyst: 'Interim analysis Q2 2025',
-    detailInsight: 'Celtrion-X targets TL1A, the most validated new mechanism in inflammatory bowel disease. The HORIZON Phase 3 program in UC and CD has potential to define a new standard of care with dual mucosal healing and anti-fibrotic effects.'
+    id: '9', name: 'Linvoseltamab', generic: 'linvoseltamab', company: 'Regeneron',
+    phase: 'Phase II', area: 'Oncology', indication: 'Relapsed/Refractory Multiple Myeloma',
+    mechanism: 'Bispecific antibody (BCMA × CD3)', enrollment: 282, startYear: 2020,
+    risk: 'medium', desig: 'Breakthrough Therapy', nctid: 'NCT03761108',
+    insight: 'BCMA-targeting bispecific with ORR ~71% in heavily pretreated MM. Competes with Pfizer\'s elranatamab and J&J\'s teclistamab. Differentiation thesis rests on every-4-week dosing convenience post-induction and cleaner safety profile. BLA filed 2024.'
   },
   {
-    id: '10', name: 'Axivant', company: 'Luminos Oncology', phase: 'Approved',
-    area: 'Oncology', mechanism: 'ADC (HER2-low)', risk: 'low',
-    insight: 'Approved for HER2-low breast cancer. ADC platform with 3 additional indications in pipeline.',
-    target: 'HER2 (low expression)', enrollment: 'N/A (Marketed)', catalyst: 'sNDA gastric Q2 2025',
-    detailInsight: 'Axivant is a trastuzumab-based ADC with a novel topoisomerase payload achieving approval in HER2-low breast cancer. The platform technology supports expansion into gastric, NSCLC, and urothelial cancers with combined addressable market exceeding $8B.'
+    id: '10', name: 'Iptacopan', generic: 'iptacopan', company: 'Novartis',
+    phase: 'Approved', area: 'Immunology', indication: 'Paroxysmal Nocturnal Hemoglobinuria (PNH)',
+    mechanism: 'Complement factor B inhibitor (oral)', enrollment: 97, startYear: 2021,
+    risk: 'low', desig: 'Breakthrough Therapy', nctid: 'NCT04558918',
+    insight: 'FDA approved December 2023 — first oral monotherapy for PNH. Disrupts IV eculizumab (Soliris) with same efficacy but once-daily oral dosing. Classic route-of-administration disruption play in a multi-billion dollar rare disease market. Strong commercial ramp in 2024.'
+  },
+  {
+    id: '11', name: 'Revumenib', generic: 'revumenib', company: 'Syndax Pharmaceuticals',
+    phase: 'Approved', area: 'Oncology', indication: 'Relapsed/Refractory AML (KMT2A or NPM1 mutant)',
+    mechanism: 'Menin inhibitor', enrollment: 116, startYear: 2020,
+    risk: 'low', desig: 'Priority Review', nctid: 'NCT04065399',
+    insight: 'FDA approved Oct 2024 — first menin inhibitor class approval. AUGMENT-101 trial showed 23% CR rate with no other options available. Part of a major 2024 trend: 6 of 17 oncology approvals were biomarker-selected, genotype-specific drugs.'
+  },
+  {
+    id: '12', name: 'Sanbexin', generic: 'edaravone dexborneol', company: 'Simcere Pharmaceuticals',
+    phase: 'Phase II', area: 'Neurology', indication: 'Acute Ischemic Stroke',
+    mechanism: 'Dual antioxidant / anti-inflammatory (sublingual)', enrollment: 3763, startYear: 2019,
+    risk: 'medium', desig: 'Breakthrough Therapy', nctid: 'NCT04950920',
+    insight: 'FDA Breakthrough Therapy designation Sep 2024 — first innovative stroke drug to receive this. TASTE-SL Phase 3 data showed improved functional outcomes within 48h of AIS onset. Stroke is a top cause of disability globally with very limited acute treatment options.'
   },
 ];
 
@@ -97,14 +113,14 @@ export const approvalRates: Record<string, number> = {
 };
 
 export const tickerItems = [
-  { name: 'AETH', price: '$42.80', change: '+3.2%', up: true },
-  { name: 'CRTX', price: '$18.45', change: '-1.8%', up: false },
-  { name: 'HLXC', price: '$67.20', change: '+0.9%', up: true },
-  { name: 'MRON', price: '$11.30', change: '-4.1%', up: false },
-  { name: 'SHLD', price: '$124.55', change: '+2.7%', up: true },
-  { name: 'NVXP', price: '$89.10', change: '+1.4%', up: true },
-  { name: 'AURS', price: '$7.85', change: '-2.3%', up: false },
-  { name: 'APEX', price: '$33.60', change: '+0.6%', up: true },
-  { name: 'VGRD', price: '$56.90', change: '+5.1%', up: true },
-  { name: 'LMNS', price: '$145.20', change: '+1.8%', up: true },
+  { name: 'AMGN', price: '$284.50', change: '+1.8%', up: true },
+  { name: 'ESALY', price: '$14.20', change: '+3.1%', up: true },
+  { name: 'LLY', price: '$782.30', change: '+2.4%', up: true },
+  { name: 'AZN', price: '$67.80', change: '+0.6%', up: true },
+  { name: 'REGN', price: '$1,045.60', change: '-0.9%', up: false },
+  { name: 'NVS', price: '$103.40', change: '+1.2%', up: true },
+  { name: 'SNDX', price: '$22.15', change: '+5.3%', up: true },
+  { name: 'SMCR', price: '$8.90', change: '-2.1%', up: false },
+  { name: 'ZVRA', price: '$4.65', change: '+0.8%', up: true },
+  { name: 'ITFM', price: '$31.20', change: '+1.5%', up: true },
 ];
