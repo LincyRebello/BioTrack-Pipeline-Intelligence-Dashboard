@@ -8,6 +8,7 @@ import FunnelChart from '@/components/FunnelChart';
 import DrugCard from '@/components/DrugCard';
 import DrugModal from '@/components/DrugModal';
 import Sidebar from '@/components/Sidebar';
+import Footer from '@/components/Footer';
 import type { Drug } from '@/data/drugs';
 
 const Index = () => {
@@ -83,6 +84,7 @@ const Index = () => {
         <Sidebar />
       </div>
 
+      <Footer />
       {selectedDrug && <DrugModal drug={selectedDrug} onClose={() => setSelectedDrug(null)} />}
     </div>
   );
