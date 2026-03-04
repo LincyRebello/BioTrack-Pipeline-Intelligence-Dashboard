@@ -116,17 +116,6 @@ Currently data is manually curated. The goal is to make it fully self-updating:
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Lovable](https://img.shields.io/badge/Lovable-ff6b35?style=flat-square)
 
----
-
-## 📁 Project Structure
-
-```
-biotrack/
-├── index.html        # Full app — UI, data, and logic
-├── data/
-│   └── pipeline.json # Drug candidate data (manual → automated)
-└── README.md
-```
 
 ---
 
