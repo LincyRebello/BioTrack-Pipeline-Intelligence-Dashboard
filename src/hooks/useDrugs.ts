@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import type { Drug } from '@/data/drugs';
 import pipelineData from '../../data/pipeline.json';
 
@@ -8,5 +9,6 @@ interface UseDrugsResult {
 }
 
 export const useDrugs = (): UseDrugsResult => {
-  return { drugs: pipelineData as Drug[], loading: false, error: null };
+  const drugs = useMemo(() => pipelineData as Drug[], []);
+  return { drugs, loading: false, error: null };
 };
