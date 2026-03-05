@@ -41,6 +41,17 @@ const Index = () => {
     return () => window.removeEventListener('keydown', handler);
   }, []);
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+          <span className="font-mono text-xs tracking-widest uppercase text-bio-muted">Loading pipeline data…</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       <Ticker />
