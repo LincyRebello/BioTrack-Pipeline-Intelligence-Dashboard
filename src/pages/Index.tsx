@@ -28,7 +28,7 @@ const Index = () => {
       }
       return true;
     });
-  }, [activePhase, activeArea, search]);
+  }, [allDrugs, activePhase, activeArea, search]);
 
   const totalCompanies = new Set(allDrugs.map((d) => d.company)).size;
   const totalApproved = allDrugs.filter((d) => d.phase === 'Approved').length;
