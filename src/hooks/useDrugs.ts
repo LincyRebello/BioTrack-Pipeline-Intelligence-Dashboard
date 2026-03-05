@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import type { Drug } from '@/data/drugs';
+import pipelineData from '../../data/pipeline.json';
 
 interface UseDrugsResult {
   drugs: Drug[];
@@ -8,25 +8,5 @@ interface UseDrugsResult {
 }
 
 export const useDrugs = (): UseDrugsResult => {
-  const [drugs, setDrugs] = useState<Drug[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch('/data/pipeline.json')
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json();
-      })
-      .then((data: Drug[]) => {
-        setDrugs(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setError(err.message);
-        setLoading(false);
-      });
-  }, []);
-
-  return { drugs, loading, error };
+  return { drugs: pipelineData as Drug[], loading: false, error: null };
 };
