@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { drugs as allDrugs } from '@/data/drugs';
+import { useDrugs } from '@/hooks/useDrugs';
 import Ticker from '@/components/Ticker';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -12,6 +12,7 @@ import Footer from '@/components/Footer';
 import type { Drug } from '@/data/drugs';
 
 const Index = () => {
+  const { drugs: allDrugs, loading, error } = useDrugs();
   const [activePhase, setActivePhase] = useState('All');
   const [activeArea, setActiveArea] = useState('All');
   const [search, setSearch] = useState('');
