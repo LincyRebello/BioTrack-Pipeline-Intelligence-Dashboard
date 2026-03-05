@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
-import { drugs as allDrugs } from '@/data/drugs';
+import { useDrugs } from '@/hooks/useDrugs';
 import Ticker from '@/components/Ticker';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -12,6 +12,7 @@ import Footer from '@/components/Footer';
 import type { Drug } from '@/data/drugs';
 
 const Index = () => {
+  const { drugs: allDrugs, loading, error } = useDrugs();
   const [activePhase, setActivePhase] = useState('All');
   const [activeArea, setActiveArea] = useState('All');
   const [search, setSearch] = useState('');
@@ -39,6 +40,17 @@ const Index = () => {
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+          <span className="font-mono text-xs tracking-widest uppercase text-bio-muted">Loading pipeline data…</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen">
