@@ -7,8 +7,8 @@
     "phase": "Approved",
     "area": "Oncology",
     "indication": "Extensive-Stage Small Cell Lung Cancer",
-    "mechanism": "Bispecific T-cell engager (DLL3 × CD3)",
-    "enrollment": 220,
+    "mechanism": "Bispecific T-cell engager (DLL3 \u00d7 CD3)",
+    "enrollment": 222,
     "startYear": 2021,
     "risk": "low",
     "desig": "Breakthrough Therapy",
@@ -24,7 +24,7 @@
     "area": "Neurology",
     "indication": "Early Alzheimer's Disease (MCI / Mild Dementia)",
     "mechanism": "Anti-amyloid-beta protofibril monoclonal antibody",
-    "enrollment": 1795,
+    "enrollment": 1906,
     "startYear": 2019,
     "risk": "low",
     "desig": "Breakthrough Therapy",
@@ -38,14 +38,14 @@
     "company": "Eli Lilly",
     "phase": "Approved",
     "area": "Oncology",
-    "indication": "ER+/HER2− Breast Cancer (ESR1-mutant)",
+    "indication": "ER+/HER2\u2212 Breast Cancer (ESR1-mutant)",
     "mechanism": "Next-gen selective estrogen receptor degrader (SERD)",
-    "enrollment": 874,
+    "enrollment": 1370,
     "startYear": 2020,
     "risk": "low",
     "desig": "Priority Review",
     "nctid": "NCT04711252",
-    "insight": "FDA approved September 2025 (EMBER-3 Phase 3 trial). Targets ESR1 mutations — the primary resistance mechanism to standard hormone therapy. Effective in combo with abemaciclib. Addresses large unmet need in 2L+ HR+ breast cancer."
+    "insight": "FDA approved September 2025 (EMBER-3 Phase 3 trial). Targets ESR1 mutations \u2014 the primary resistance mechanism to standard hormone therapy. Effective in combo with abemaciclib. Addresses large unmet need in 2L+ HR+ breast cancer."
   },
   {
     "id": "4",
@@ -55,13 +55,13 @@
     "phase": "Phase III",
     "area": "Oncology",
     "indication": "ES-SCLC 1st Line (DeLLphi-304)",
-    "mechanism": "Bispecific T-cell engager (DLL3 × CD3)",
-    "enrollment": 610,
+    "mechanism": "Bispecific T-cell engager (DLL3 \u00d7 CD3)",
+    "enrollment": 24,
     "startYear": 2023,
     "risk": "low",
     "desig": "Breakthrough Therapy",
     "nctid": "NCT05765006",
-    "insight": "Confirmatory Phase 3 to convert accelerated approval to full approval and expand to 1L setting. If positive, could displace atezolizumab + chemo as standard of care in ES-SCLC — a major commercial inflection."
+    "insight": "Confirmatory Phase 3 to convert accelerated approval to full approval and expand to 1L setting. If positive, could displace atezolizumab + chemo as standard of care in ES-SCLC \u2014 a major commercial inflection."
   },
   {
     "id": "5",
@@ -77,7 +77,7 @@
     "risk": "low",
     "desig": "Fast Track",
     "nctid": "NCT05412004",
-    "insight": "SURMOUNT-OSA Phase 3 showed ~63% reduction in apnea-hypopnea index — FDA approved for OSA in 2024. First pharmacotherapy approved for OSA. Expands the $50B+ GLP-1 market into a massive new indication."
+    "insight": "SURMOUNT-OSA Phase 3 showed ~63% reduction in apnea-hypopnea index \u2014 FDA approved for OSA in 2024. First pharmacotherapy approved for OSA. Expands the $50B+ GLP-1 market into a massive new indication."
   },
   {
     "id": "6",
@@ -93,7 +93,7 @@
     "risk": "low",
     "desig": "Orphan Drug",
     "nctid": "NCT02851797",
-    "insight": "FDA approved 2024 — only the third treatment for DMD. HDAC inhibition promotes muscle repair and reduces degeneration. Orphan Drug designation provides 7-year market exclusivity. Small patient population but high unmet need and strong pricing power."
+    "insight": "FDA approved 2024 \u2014 only the third treatment for DMD. HDAC inhibition promotes muscle repair and reduces degeneration. Orphan Drug designation provides 7-year market exclusivity. Small patient population but high unmet need and strong pricing power."
   },
   {
     "id": "7",
@@ -104,12 +104,12 @@
     "area": "Neurology",
     "indication": "Niemann-Pick Disease Type C",
     "mechanism": "Heat shock protein co-inducer",
-    "enrollment": 119,
+    "enrollment": 50,
     "startYear": 2016,
     "risk": "low",
     "desig": "Orphan Drug",
     "nctid": "NCT02612129",
-    "insight": "FDA approved September 2024 — only approved therapy for this ultra-rare lysosomal storage disorder. HSP upregulation protects neurons from misfolded protein accumulation. Orphan status + zero competition = strong pricing power despite small patient population."
+    "insight": "FDA approved September 2024 \u2014 only approved therapy for this ultra-rare lysosomal storage disorder. HSP upregulation protects neurons from misfolded protein accumulation. Orphan status + zero competition = strong pricing power despite small patient population."
   },
   {
     "id": "8",
@@ -135,8 +135,8 @@
     "phase": "Phase II",
     "area": "Oncology",
     "indication": "Relapsed/Refractory Multiple Myeloma",
-    "mechanism": "Bispecific antibody (BCMA × CD3)",
-    "enrollment": 282,
+    "mechanism": "Bispecific antibody (BCMA \u00d7 CD3)",
+    "enrollment": 387,
     "startYear": 2020,
     "risk": "medium",
     "desig": "Breakthrough Therapy",
@@ -157,7 +157,7 @@
     "risk": "low",
     "desig": "Breakthrough Therapy",
     "nctid": "NCT04558918",
-    "insight": "FDA approved December 2023 — first oral monotherapy for PNH. Disrupts IV eculizumab (Soliris) with same efficacy but once-daily oral dosing. Classic route-of-administration disruption play in a multi-billion dollar rare disease market. Strong commercial ramp in 2024."
+    "insight": "FDA approved December 2023 \u2014 first oral monotherapy for PNH. Disrupts IV eculizumab (Soliris) with same efficacy but once-daily oral dosing. Classic route-of-administration disruption play in a multi-billion dollar rare disease market. Strong commercial ramp in 2024."
   },
   {
     "id": "11",
@@ -168,12 +168,12 @@
     "area": "Oncology",
     "indication": "Relapsed/Refractory AML (KMT2A or NPM1 mutant)",
     "mechanism": "Menin inhibitor",
-    "enrollment": 116,
+    "enrollment": 447,
     "startYear": 2020,
     "risk": "low",
     "desig": "Priority Review",
     "nctid": "NCT04065399",
-    "insight": "FDA approved Oct 2024 — first menin inhibitor class approval. AUGMENT-101 trial showed 23% CR rate with no other options available. Part of a major 2024 trend: 6 of 17 oncology approvals were biomarker-selected, genotype-specific drugs."
+    "insight": "FDA approved Oct 2024 \u2014 first menin inhibitor class approval. AUGMENT-101 trial showed 23% CR rate with no other options available. Part of a major 2024 trend: 6 of 17 oncology approvals were biomarker-selected, genotype-specific drugs."
   },
   {
     "id": "12",
@@ -184,11 +184,11 @@
     "area": "Neurology",
     "indication": "Acute Ischemic Stroke",
     "mechanism": "Dual antioxidant / anti-inflammatory (sublingual)",
-    "enrollment": 3763,
+    "enrollment": 914,
     "startYear": 2019,
     "risk": "medium",
     "desig": "Breakthrough Therapy",
     "nctid": "NCT04950920",
-    "insight": "FDA Breakthrough Therapy designation Sep 2024 — first innovative stroke drug to receive this. TASTE-SL Phase 3 data showed improved functional outcomes within 48h of AIS onset. Stroke is a top cause of disability globally with very limited acute treatment options."
+    "insight": "FDA Breakthrough Therapy designation Sep 2024 \u2014 first innovative stroke drug to receive this. TASTE-SL Phase 3 data showed improved functional outcomes within 48h of AIS onset. Stroke is a top cause of disability globally with very limited acute treatment options."
   }
 ]
